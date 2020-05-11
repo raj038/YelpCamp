@@ -17,7 +17,14 @@ var campgroundroutes=require("./routes/campground");
 var indexroutes     =require("./routes/index");
 
 mongoose.connect("mongodb://localhost/yelpdb");
-mongoose.connect("mongodb+srv://raj038:saitama033@cluster0-brmnz.mongodb.net/test?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://raj038:saitama033@cluster0-brmnz.mongodb.net/test?retryWrites=true&w=majority",{
+    useNewUrlParser: true,
+    useCreateIndex: true
+}).then(() => {
+    console.log("Connected To Db!");
+}).catch(err =>{
+    console.log("Error",err.message);
+} )
 //seed();
 app.set("view engine","ejs");
 app.use(flash());

@@ -22,7 +22,7 @@ mongoose.connect("mongodb+srv://raj038:saitama033@cluster0-brmnz.mongodb.net/tes
     console.log("Connected To Db!");
 }).catch(err =>{
     console.log("Error",err.message);
-} )
+});
 //seed();
 app.set("view engine","ejs");
 app.use(flash());

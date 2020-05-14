@@ -15,7 +15,6 @@ var port          =process.env.PORT || 3000;
 var commentroutes   =require("./routes/comment");
 var campgroundroutes=require("./routes/campground");
 var indexroutes     =require("./routes/index");
-
 mongoose.connect(process.env.DATABASEURL,{   
     useNewUrlParser: true,
     useCreateIndex: true

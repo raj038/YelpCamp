@@ -1,20 +1,20 @@
 <%-include("../header") %>
     <div class="container">
         <header class="jumbotron">
-            <h1>Welcome To YelpCamp!</h1>
+            <h1><i class="fas fa-campground"></i>  Welcome To YelpCamp!</h1>
             <p>View Our Hand-picked Campground From All Over The World</p>
-            <a class="btn btn-info btn-md"href="/campgrounds/new">Add a new campground</a>
+            <a class="btn btn-primary btn-lg"href="/campgrounds/new">Add a new campground</a>
         </header>
-        <div  class="row text-center" style="display:flex; flex-wrap:wrap;">
+        <div  class="row text-center">
             <% campgrounds.forEach(function(camp){%>
-                <div class="col-md-4 col-sm-6">
-                    <div class="thumbnail">
-                        <img src="<%=camp.image%>" >
-                        <div class="caption">
-                            <li><strong><%= camp.name %></strong></li>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="<%=camp.image%>" alt="<%=camp.name%>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=camp.name%></h5>
+                            <a href="/Campgrounds/<%=camp._id%>" class="btn btn-outline-success">Show More...</a>
                         </div>
-                        <a href="/Campgrounds/<%=camp._id%>" class="btn btn-md btn-success">Show More..</a>
-                    </div>        
+                    </div>     
                 </div>        
             <%})%>
         </div>

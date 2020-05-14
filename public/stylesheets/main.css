@@ -12,3 +12,9 @@
 .delete-but{
     display:inline;
 }
+.fa , .far , .fas{
+    font-size:100px;
+}
+.navbar-expand-md{
+    background-color:#e3f2fd;
+}
